@@ -1,4 +1,5 @@
-FROM node:9.2.1-alpine
+FROM node:11.14.0-alpine
 MAINTAINER eric shmilyhe@163.com
-RUN apk --update add python make g++ \
-&&  npm config set registry https://registry.npm.taobao.org
+RUN  npm config set registry https://registry.npm.taobao.org \
+&& apk update add git \
+&& npm install -g @vue/cli
